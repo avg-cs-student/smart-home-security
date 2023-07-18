@@ -9,7 +9,7 @@ Although the project is designed to be extensible, the current scope of the proj
 
 Features:
 ---------
-- Motion detection at home entryways (or wherever you desire)
+- Interrupt-driven motion detection at home entryways (or wherever you desire)
 - Persistent history of events via local database
 - Automated periodic database backups
 
@@ -23,12 +23,12 @@ Necessary Equipment:
     - sqlite3
 - ESP32 (minimum 1)
     - PIR Sensor (1 per)
-    - __OPTIONAL__ SSD1306 OLED Display (1 per)
+    - __[OPTIONAL]__ SSD1306 OLED Display (1 per)
     - Power supply (3.3V)
     - Some means of connecting components (breadboard/solder/etc)
 - WiFi network
 - Arduino IDE
-    - esp32 espressif board manager
+    - ESP32 Espressif board manager
     - Adafruit_SSD1306 Library (FOSS available via Arduino IDE)
 
 Project Layout:
@@ -81,6 +81,16 @@ Client Installation and Start:
 
 - Connect ESP32 via USB and install `homesecurityclient.ino` via Arduino IDE 
 - With server running, place sensors and connect power (3.3V)
+- To adjust distance sensitivity, the PIR has a screw adjustment on the side
 
 __NOTE:__ In the `homesecurityclient.ino` file, `SELF_METADATA` must be modified prior to installation for each device to ensure unique, descriptive names.
 
+Future Directions:
+------------------
+- Camera integration for recording the cause of each detected event
+- User-friendly database querying
+- Configurable alerts triggered to text message/email
+- Rugged casing for outdoor protection
+- Automatic reconnects in the event of WiFi or power failure
+- Encryption in transit to protect from unwanted eavesdropping
+- Dedicated subnet for more robust security
