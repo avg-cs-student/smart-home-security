@@ -79,7 +79,7 @@ Client Installation and Start:
 | GPIO22    | OLED SCL   |
 
 - Connect ESP32 via USB and install `homesecurityclient.ino` via Arduino IDE 
+- With server running, place sensors and connect power (3.3V)
 
 __NOTE:__ In the `homesecurityclient.ino` file, `SELF_METADATA` must be modified prior to installation for each device to ensure unique, descriptive names.
 
-- With server running, place sensors and connect power (3.3V)
