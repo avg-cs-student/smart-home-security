@@ -79,6 +79,7 @@ Client Installation and Start:
 | GPIO21    | OLED SDA   |
 | GPIO22    | OLED SCL   |
 
+- Copy `network_settings.h.sample` to `network_settings.h`, then modify the contents to contain your personal WiFi network settings.
 - Connect ESP32 via USB and install `homesecurityclient.ino` via Arduino IDE 
 - With server running, place sensors and connect power (3.3V)
 - To adjust distance sensitivity, the PIR has a screw adjustment on the side
