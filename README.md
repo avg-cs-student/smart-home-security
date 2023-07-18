@@ -72,6 +72,7 @@ __NOTE__: At this point, you should see your server running and waiting on devic
 Client Installation and Start:
 ------------------------------
 - Hardware Connection
+
 | ESP32     | Device    |
 |---------- | -------------- |
 | GPIO15 (with 2.2k Resistor) | PIR Output |
