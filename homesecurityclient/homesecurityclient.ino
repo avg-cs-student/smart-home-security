@@ -24,7 +24,7 @@ void connect_to_local_wifi(const char *network, const char *pw);
 void connect_to_server(uint16_t port, const char *host);
 
 // This changes for each ESP32 in the field
-#define SELF_METADATA (uint8_t*)"BACK DOOR"
+#define SELF_METADATA (uint8_t*)"FRONT DOOR"
 const size_t PACKET_MAX = 2048;
 
 // These values are updated by the server

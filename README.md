@@ -23,7 +23,7 @@ Necessary Equipment:
     - sqlite3
 - ESP32 (minimum 1)
     - PIR Sensor (1 per)
-    - SSD1306 OLED Display (1 per __optional__)
+    - __OPTIONAL__ SSD1306 OLED Display (1 per)
     - Power supply (3.3V)
     - Some means of connecting components (breadboard/solder/etc)
 - WiFi network
@@ -42,6 +42,7 @@ Project Layout:
 ├── homesecurityserver              Source code for local server
 │  ├── base.py                      TCP server (non-blocking) logic
 │  ├── database.py                  Database logic
+│  ├── generate-report.sh           Basic database query example script
 │  ├── initdb.sql                   Code for database initialization
 │  ├── main.py                      Executable script, creates and runs local python server
 │  ├── packet.py                    Code for reading and writing data packets
@@ -70,4 +71,15 @@ __NOTE__: At this point, you should see your server running and waiting on devic
 
 Client Installation and Start:
 ------------------------------
-- TODO
+- Hardware Connection
+| ESP32     | Device    |
+|---------- | -------------- |
+| GPIO15 (with 2.2k Resistor) | PIR Output |
+| GPIO21    | OLED SDA   |
+| GPIO22    | OLED SCL   |
+
+- Connect ESP32 via USB and install `homesecurityclient.ino` via Arduino IDE 
+
+__NOTE:__ In the `homesecurityclient.ino` file, `SELF_METADATA` must be modified prior to installation for each device to ensure unique, descriptive names.
+
+- With server running, place sensors and connect power (3.3V)
